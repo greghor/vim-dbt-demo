@@ -21,24 +21,24 @@ nnoremap ,dcp :call ExecuteDbtCommand("compile --target prod")<CR>
 
 ## Installation
 
-use `.vimrc` as your config file and edit it with vim
+- use `.vimrc` as your config file and edit it with vim
 
-    vim -u .vimrc .vimrc
+        vim -u .vimrc .vimrc
 
-Install the required plugins by executing (in normal mode)
+- Install the required plugins by executing (in normal mode)
     
-    :PlugInstall
+        :PlugInstall
 
-Configure your dbt profile in `~/.dbt/profiles.yml`
+- Configure your dbt profile in `~/.dbt/profiles.yml`
 
-Create the required models
+- Create the required models
 
-    dbt run
+        dbt build
 
-Fire a tmux session and start experimenting with the mappings!
+- Fire a tmux session and start experimenting with the mappings!
 
-    tmux new -s <session_name>
-    vim -u .vimrc models/orders.sql
+        tmux new -s <session_name>
+        vim -u .vimrc models/orders.sql
 
 **NB:** you don't need to specify the vim config with `-u` file if you move `src/.vimrc` to your home directory
 
